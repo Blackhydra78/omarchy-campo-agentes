@@ -9,7 +9,7 @@ Widget de barra para [Omarchy](https://omarchy.org) que muestra tus agentes de I
 ## Instalación
 
 ```bash
-omarchy plugin add https://github.com/USUARIO/omarchy-campo-agentes.git --enable
+omarchy plugin add https://github.com/Blackhydra78/omarchy-campo-agentes.git --enable
 ```
 
 Requisitos: `python3`, `ssh` y acceso por clave (sin contraseña) al servidor.

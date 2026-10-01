@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "campo.agentes",
+  "name": "Agentes de Campo",
+  "version": "1.3.0",
+  "author": "Diego",
+  "license": "MIT",
+  "description": "Chats SSH y avisos por agente con lecturas persistentes locales.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "activation": "on-demand",
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Agentes de Campo",
+    "description": "Seis agentes: Hermes, Fernando, Celeste, Sofía, Administración y Compras, y El Mecánico. El nombre abre la charla; el contador muestra sus avisos.",
+    "category": "AI",
+    "aliases": [
+      "agentes",
+      "campo",
+      "vps"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "sshHost": "vps",
+      "refreshIntervalSec": 60
+    },
+    "schema": [
+      {
+        "key": "sshHost",
+        "type": "string",
+        "label": "Host SSH",
+        "defaultValue": "vps",
+        "description": "Alias de ~/.ssh/config (o usuario@host) del VPS donde corre campo-agentes."
+      },
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresco (segundos, mínimo 15)",
+        "defaultValue": 60,
+        "min": 15,
+        "max": 3600,
+        "step": 15
+      }
+    ]
+  }
+}
